@@ -1,0 +1,15 @@
+declare
+  2  v_sname sailors.sname%type;
+  3  v_age sailors.age%type;
+  4  cursor c2 is select sname,age from sailors;
+  5  begin
+  6  open c2;
+  7  loop
+  8  fetch c2 into v_sname,v_age;
+  9  exit
+ 10  when c2% notfound;
+ 11  dbms_output.put_line(v_sname|| ' ' || v_age );
+ 12  end loop;
+ 13  close c2;
+ 14  end;
+ 15  /
