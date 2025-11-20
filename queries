@@ -7,3 +7,7 @@ Find the sailors with the highest rating. (All)
 SQL> select S. Sid, S. Name from Sailor s where S.rating >= all (select S. rating from sailors S1);
 
 Find the names of sailors who have reserved both a red and a green boat. (In)
+select S. Sname from sailors s, reserves r, boats where s.sid in(select s2. sid from sailors s2, boats b2, reserves r2 where S2.Sid = r2.sid and r2.bid=b2.bid
+
+Find the names of sailors who have reserved boat 103.(Exists)
+Select S.name reserves from sailors where r.bid = 103 and r.sid = s.sid ;
