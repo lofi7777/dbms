@@ -1,0 +1,9 @@
+find sailors whose rating better than horatio
+SQL> select S. Sid, Ssname from sailors where S.rating
+
+> any (select si rating from sailors S, where S1. name ='horatio');
+
+Find the sailors with the highest rating. (All)
+SQL> select S. Sid, S. Name from Sailor s where S.rating >= all (select S. rating from sailors S1);
+
+Find the names of sailors who have reserved both a red and a green boat. (In)
